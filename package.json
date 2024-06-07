@@ -1,0 +1,32 @@
+{
+  "name": "tut10-nodejs-authentication",
+  "version": "1.2.0",
+  "description": "Node.Js Authentication Tutorial",
+  "main": "server.js",
+  "author": "Chieng Sisovin",
+  "devDependencies": {
+    "date-fns": "^3.6.0",
+    "eslint": "^8.21.0",
+    "nodemon": "^3.1.2",
+    "uuid": "^9.0.1"
+  },
+  "eslintConfig": {},
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "routing"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0"
+  }
+}

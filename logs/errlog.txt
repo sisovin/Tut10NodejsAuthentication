@@ -1,0 +1,7 @@
+20240602	20:43:01	d1728712-a401-4c0f-b966-5c55bef4ac92	Error : Not allowed by CORS
+20240602	21:59:00	6c5c4438-3e09-4713-8d5e-e33d5a1c2d7f	TypeError : "subdir" is not a function
+20240602	22:10:47	e4e81989-5aa7-4e3f-bf66-60cbbfebe8ac	TypeError : "subdir" is not a function
+20240602	22:18:36	b0277d78-55e8-4fdc-b34a-c0e6dab604d1	TypeError : "subdir" is not a function
+20240603	15:30:31	a0bdc9bc-81c3-457c-9dde-4efe0e0a2f61	ReferenceError : logEvents is not defined
+20240603	15:34:00	f6a2324f-48ba-4f16-af37-27d3d368726a	ReferenceError : logEvents is not defined
+20240603	15:42:42	cf250f3c-1183-4b95-8c3e-55fa59bfddcf	TypeError : Cannot read properties of undefined (reading 'id')

@@ -1,0 +1,191 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Tut10NodejsAuthentication</Name>
+    <RootNamespace>Tut08NodejsRouting</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{08ac7a3a-ed64-476c-af40-46525fdddf66}</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
+    <Content Include="config\corsOptions.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controllers\authController.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controllers\employeesController.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controllers\registerController.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="logs\logcorsOptions.txt" />
+    <Content Include="logs\logorigin.txt" />
+    <Content Include="logs\logwhitelist.txt" />
+    <Content Include="logs\reglog.txt" />
+    <Content Include="model\employees.json" />
+    <Content Include="data\data.json" />
+    <Content Include="data\data.txt" />
+    <Content Include="logs\errlog.txt" />
+    <Content Include="middleware\errorHandler.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="middleware\logEvents.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="model\users.json">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="package-lock.json" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\bootstrap-icons.css" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\bootstrap-icons.json" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\bootstrap-icons.min.css" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\bootstrap-icons.scss" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\fonts\bootstrap-icons.woff" />
+    <Content Include="public\bootstrap\bootstrap-icons\font\fonts\bootstrap-icons.woff2" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.rtl.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.rtl.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.rtl.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.rtl.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.rtl.min.css" />
+    <Content Include="public\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.bundle.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.esm.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.js.map" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="public\bootstrap\dist\js\bootstrap.min.js.map" />
+    <Content Include="public\img\img1.jpg" />
+    <Content Include="routes\api\employees.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\auth.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\register.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="routes\root.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="server.js" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Content Include="views\404.html" />
+    <Content Include="views\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="middleware\" />
+    <Folder Include="logs\" />
+    <Folder Include="model\" />
+    <Folder Include="controllers\" />
+    <Folder Include="config\" />
+    <Folder Include="routes\" />
+    <Folder Include="public\" />
+    <Folder Include="public\bootstrap\" />
+    <Folder Include="public\bootstrap\bootstrap-icons\" />
+    <Folder Include="public\bootstrap\bootstrap-icons\font\" />
+    <Folder Include="public\bootstrap\bootstrap-icons\font\fonts\" />
+    <Folder Include="public\bootstrap\dist\" />
+    <Folder Include="public\bootstrap\dist\css\" />
+    <Folder Include="public\bootstrap\dist\js\" />
+    <Folder Include="public\img\" />
+    <Folder Include="routes\api\" />
+    <Folder Include="views\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

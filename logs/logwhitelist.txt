@@ -1,0 +1,1 @@
+20240603	11:06:29	e992b53a-9e5b-49ae-b6d8-0278006d6de8	Whitelist: https://www.yoursite.com,http://127.0.0.1:5500,http://localhost:3500,http://localhost:3000
